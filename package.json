@@ -25,6 +25,8 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^8.1.1",
     "@nestjs/typeorm": "^8.0.2",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.1",
     "mysql2": "^2.3.3",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
@@ -70,5 +72,18 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "main": ".eslintrc.js",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/curso-backend-web/nest-library.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/curso-backend-web/nest-library/issues"
+  },
+  "homepage": "https://github.com/curso-backend-web/nest-library#readme"
 }

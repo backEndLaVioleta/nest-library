@@ -37,11 +37,24 @@ Content-Type: application/json
     "userId":1
 }
 
-##########
-PATCH http://localhost:3000/api/v1/loan/1
+#############################
+
+POST http://localhost:3000/api/v1/user/register
 Content-Type: application/json
 
 {
-    "bookId":1,
-    "userId":1
+    "email": "hello@hello.com",
+    "password": "1234",
+    "photo": "http://photo.png"
+}
+
+#############################################
+
+POST http://localhost:3000/api/v1/user/register
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": "1234",
+    "photo": "photo.png"
 }
