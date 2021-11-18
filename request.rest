@@ -54,7 +54,10 @@ POST http://localhost:3000/api/v1/user/register
 Content-Type: application/json
 
 {
-    "email": "",
+    "email": "helloTwo@hello.com",
     "password": "1234",
     "photo": "photo.png"
 }
+
+#################################
+GET http://localhost:3000/api/v1/user/4?1234

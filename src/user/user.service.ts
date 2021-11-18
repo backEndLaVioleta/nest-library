@@ -19,19 +19,22 @@ return await this.userRepository.save(user)
    // return `This action adds a new user ${createUserDto}`
   }
 
-  findAll() {
-    return `This action returns all user`
+  async findAll() {
+    return await `This action returns all user`
   }
 
+  /* async findOne(mail: string) {
+    return await this.userRepository.findOne(mail)
+  } */
   async findOne(id: number) {
     return await this.userRepository.findOne(id)
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`
+  async update(id: number, updateUserDto: UpdateUserDto) {
+    return await `This action updates a #${id} user`
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`
+  async remove(id: number) {
+    return await `This action removes a #${id} user`
   }
 }
