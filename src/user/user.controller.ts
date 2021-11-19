@@ -2,30 +2,32 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { UserService } from './user.service'
 import { CreateUserDto } from './dto/create-user.dto'
 import { UpdateUserDto } from './dto/update-user.dto'
-import AuthService from 'src/shared/utilities/authoritation.service'
+import Login from '../auth/dto/loginUser.dto'
+import { AuthService } from 'src/auth/auth.service'
 
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService,
-              private readonly authService: AuthService) {}
+    /*private readonly authService: AuthService*/) {}
 
   @Post('register')
   create(@Body() createUserDto: CreateUserDto) {
     return this.userService.create(createUserDto)
   }
+/* @Post('login')
+  login(@Body() loginUserDto: Login){
+    return this.authService.login(loginUserDto)
+  } */
 
-  /* @Get(':mail')
+  @Get(':mail')
   findOne(@Param('mail') mail: string) {
     return this.userService.findOne(mail)
-  } */
-  @Get(':id')
+  }
+ /*  @Get(':id')
   findOne(@Param('id') id: string) {
     return this.userService.findOne(+id)
   }
-@Get(':id?pass')
-validateOne(@Param('id?pass')id: string, pass:string){
-return this.authService.validateUser(id,pass)
-}
+ */
  /*  @Get()
   findAll() {
     return this.userService.findAll()

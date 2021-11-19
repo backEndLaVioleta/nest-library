@@ -8,8 +8,8 @@ class Encryptation {
     }
 
     // descryp aqui
-    static async comparePassword(passwordOne: string, passwordTwo: string){
-      return await bcrypt.compare(passwordOne, passwordTwo)
+    static async comparePassword(passwordOne: string, hash: string){
+      return await bcrypt.compare(passwordOne, hash)
     }
     
     

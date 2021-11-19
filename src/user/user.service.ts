@@ -23,12 +23,12 @@ return await this.userRepository.save(user)
     return await `This action returns all user`
   }
 
-  /* async findOne(mail: string) {
+  async findOne(mail: string) {
     return await this.userRepository.findOne(mail)
-  } */
-  async findOne(id: number) {
-    return await this.userRepository.findOne(id)
   }
+ /*  async findOne(id: number) {
+    return await this.userRepository.findOne(id)
+  } */
 
   async update(id: number, updateUserDto: UpdateUserDto) {
     return await `This action updates a #${id} user`

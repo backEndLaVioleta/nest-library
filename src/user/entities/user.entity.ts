@@ -1,4 +1,3 @@
-import AuthService from "src/shared/utilities/authoritation.service"
 import Encryptation from "src/shared/utilities/encryptation.service"
 import { BeforeInsert, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm"
 
