@@ -14,7 +14,7 @@ async function bootstrap() {
     .setDescription('nestjs rest api')
     .setVersion('1.0')
     .addBearerAuth({type: 'http', scheme:'bearer', bearerFormat:'jwt', in: 'header'}, 'access-token')
-    .addBasicAuth()
+    .addBasicAuth({type: 'http'})
     .build()
   const document = SwaggerModule.createDocument(app, config)
   SwaggerModule.setup('api', app, document)

@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
+import { Injectable } from '@nestjs/common'
 import { JwtService } from '@nestjs/jwt'
 import Encryptation from 'src/shared/utilities/encryptation.service'
 import loginUserDto from 'src/auth/dto/loginUser.dto'
