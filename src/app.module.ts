@@ -11,7 +11,7 @@ import { AuthModule } from './auth/auth.module'
     BookModule,
     UserModule,
     LoanModule,
-    AuthModule, 
+    AuthModule
 ]
   // providers: [ UserService]
 })

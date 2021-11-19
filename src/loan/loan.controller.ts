@@ -1,17 +1,19 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, HttpException, HttpCode, HttpStatus, Put, UseFilters } from '@nestjs/common'
+import { Controller, Get, Post, Body, Patch, Param, Delete, HttpException, HttpCode, HttpStatus, Put, UseFilters, UseGuards } from '@nestjs/common'
 import { LoanService } from './loan.service'
 import { LoanDto } from './dto/loan.dto'
 import { HttpExceptionFilter } from '../shared/exceptions/http-exception.filter'
+import { AuthGuard } from '@nestjs/passport'
 
 // import { UpdateLoanDto } from './dto/update-loan.dto'
 @UseFilters(new HttpExceptionFilter())
+@UseGuards(AuthGuard('jwt'))
 @Controller('loan')
 export class LoanController {
   constructor(private readonly loanService: LoanService) {}
 
   @Post()
   async create(@Body() loanDto: LoanDto) {
-      return await this.loanService.create(LoanDto)
+      return await this.loanService.create(loanDto)
   }
 
   @Patch(':loanId')

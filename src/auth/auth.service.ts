@@ -25,7 +25,11 @@ if(user && isValidPassWord){
     }
   
    async login(user:loginUserDto){
-     const result =   await this.validateUser(user.email, user.password)
+    const payload = {email: user.email}
+    return{
+        acccess_token: this.jwtService.sign(payload)
+    }
+   /*   const result =   await this.validateUser(user.email, user.password)
      if(result){
         const payload = {email: user.email}
   return{
@@ -35,7 +39,7 @@ if(user && isValidPassWord){
          throw new HttpException(
              'user or password invalid',
             HttpStatus.UNAUTHORIZED)
-     }
+     } */
   
     }
 }
